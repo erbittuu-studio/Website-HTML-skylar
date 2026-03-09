@@ -148,12 +148,17 @@ body.en{font-family:var(--fen)}
 
 .bsun{
   position:absolute;top:-160px;right:-120px;
-  width:500px;height:500px;border-radius:50%;
+  width:520px;height:520px;border-radius:50%;
   background:radial-gradient(circle at 45% 45%,
-    rgba(255,200,60,.16) 0%,rgba(255,120,0,.08) 45%,rgba(255,80,0,.03) 65%,transparent 80%);
+    rgba(255,210,70,.28) 0%,
+    rgba(255,160,0,.18) 30%,
+    rgba(255,100,0,.08) 55%,
+    rgba(255,60,0,.03) 70%,
+    transparent 85%);
   animation:bsPulse 8s ease-in-out infinite;
+  filter:blur(2px);
 }
-@keyframes bsPulse{0%,100%{transform:scale(1);opacity:.8}50%{transform:scale(1.1);opacity:1}}
+@keyframes bsPulse{0%,100%{transform:scale(1);opacity:.85}50%{transform:scale(1.1);opacity:1}}
 
 /* Rays: single rotating wrapper — clean, no transform-origin bugs */
 .brays{
@@ -267,24 +272,51 @@ section{padding:72px 0}
 .hr2{inset:14%;animation:hrP 6.5s ease-in-out .8s infinite}
 .hr3{inset:28%;animation:hrP 8s ease-in-out 1.5s infinite}
 @keyframes hrP{0%,100%{opacity:.5;transform:scale(1)}50%{opacity:1;transform:scale(1.04)}}
+/* hcore: outer div holds translate-50%, inner div does the pulse animation.
+   This prevents bsPulse from clobbering the centering transform. */
 .hcore{
   position:absolute;top:50%;left:50%;
   transform:translate(-50%,-50%);
-  width:120px;height:120px;border-radius:50%;
-  background:radial-gradient(circle,rgba(255,200,60,.25),rgba(255,120,0,.12),transparent 70%);
-  display:flex;align-items:center;justify-content:center;font-size:3rem;
-  animation:bsPulse 4s ease-in-out infinite;
+  width:140px;height:140px;
 }
-/* Orbit: wrapper rotates, dot is offset from center */
-.ow{position:absolute;top:50%;left:50%;width:0;height:0;will-change:transform}
+.hcore-inner{
+  width:100%;height:100%;border-radius:50%;
+  background:radial-gradient(circle,
+    rgba(255,220,80,.55) 0%,
+    rgba(255,160,0,.35) 30%,
+    rgba(255,100,0,.18) 55%,
+    rgba(255,80,0,.06) 75%,
+    transparent 100%);
+  display:flex;align-items:center;justify-content:center;
+  font-size:3.2rem;
+  box-shadow:
+    0 0 30px rgba(255,179,0,.5),
+    0 0 70px rgba(255,150,0,.3),
+    0 0 120px rgba(255,100,0,.15);
+  animation:corePulse 3.5s ease-in-out infinite;
+}
+@keyframes corePulse{
+  0%,100%{transform:scale(1);box-shadow:0 0 30px rgba(255,179,0,.5),0 0 70px rgba(255,150,0,.3),0 0 120px rgba(255,100,0,.15)}
+  50%{transform:scale(1.12);box-shadow:0 0 50px rgba(255,200,0,.8),0 0 100px rgba(255,150,0,.5),0 0 180px rgba(255,100,0,.25)}
+}
+
+/* Orbit wrappers: positioned at exact center of .hvis (210px,210px).
+   Each wrapper is a zero-size point at center, rotates around it.
+   Dot is offset left by radius amount. top offset = -(dot-height/2) */
+.ow{
+  position:absolute;
+  top:210px;left:210px;   /* center of 420×420 .hvis */
+  width:0;height:0;
+  will-change:transform;
+}
 .ow1{animation:oSpin 10s linear infinite}
 .ow2{animation:oSpin 17s linear infinite}
 .ow3{animation:oSpin 26s linear infinite}
-@keyframes oSpin{to{transform:rotate(360deg)}}
-.od{position:absolute;border-radius:50%;box-shadow:0 0 10px currentColor}
-.ow1 .od{width:9px;height:9px;top:-4.5px;left:-130px;background:var(--sun);color:var(--sun)}
-.ow2 .od{width:7px;height:7px;top:-3.5px;left:-168px;background:var(--grn);color:var(--grn)}
-.ow3 .od{width:6px;height:6px;top:-3px;left:-200px;background:rgba(255,140,0,.8);color:rgba(255,140,0,.8)}
+@keyframes oSpin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+.od{position:absolute;border-radius:50%}
+.ow1 .od{width:10px;height:10px;top:-5px;left:-135px;background:var(--sun);box-shadow:0 0 12px var(--sun),0 0 24px rgba(255,179,0,.5)}
+.ow2 .od{width:8px;height:8px;top:-4px;left:-172px;background:var(--grn);box-shadow:0 0 10px var(--grn),0 0 20px rgba(0,230,118,.4)}
+.ow3 .od{width:7px;height:7px;top:-3.5px;left:-205px;background:#FF8C00;box-shadow:0 0 10px #FF8C00,0 0 20px rgba(255,140,0,.4)}
 
 /* ═══ SECTION HEADER ═══ */
 .slbl{display:inline-flex;align-items:center;gap:8px;font-size:.81rem;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:var(--sun);margin-bottom:12px;font-family:var(--fen)}
@@ -527,7 +559,7 @@ footer{background:var(--navy);border-top:1px solid var(--bdr-s);padding:44px 0 2
   <!-- Decorative solar orbit -->
   <div class="hvis" aria-hidden="true">
     <div class="hr hr1"></div><div class="hr hr2"></div><div class="hr hr3"></div>
-    <div class="hcore">☀</div>
+    <div class="hcore"><div class="hcore-inner">☀</div></div>
     <div class="ow ow1"><div class="od"></div></div>
     <div class="ow ow2"><div class="od"></div></div>
     <div class="ow ow3"><div class="od"></div></div>
