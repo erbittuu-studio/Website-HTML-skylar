@@ -1,0 +1,120 @@
+{
+  "lang": "gu",
+  "dir": "ltr",
+
+  "nav": {
+    "services": "સેવાઓ",
+    "about": "અમારા વિશે",
+    "how": "કઈ રીતે",
+    "faq": "FAQ",
+    "contact": "સંપર્ક",
+    "cta": "📞 ફ્રી સર્વે"
+  },
+
+  "hero": {
+    "badge": "ગુજરાત નં.૧ MNRE-Certified Solar • ખેડા",
+    "title_line1": "સૂર્ય ઊર્જાથી",
+    "title_highlight": "વીજળી મફત,",
+    "title_line3": "ભવિષ્ય ઉજ્જ્વળ",
+    "subtitle": "PM Surya Ghar Yojana – ₹૭૮,૦૦૦ સુધી Subsidy. ઘર, ખેતી, ધંધા — ૨૫ વર્ષ Warranty, ૩–૫ વર્ષ Payback.",
+    "btn_primary": "ફ્રી Survey Book",
+    "btn_secondary": "ફોન કરો",
+    "stats": [
+      { "value": "500+", "label": "ઇન્સ્ટૉલ" },
+      { "value": "5+",   "label": "વર્ષ અનુભવ" },
+      { "value": "25yr", "label": "Warranty" },
+      { "value": "24/7", "label": "Support" }
+    ]
+  },
+
+  "ticker": [
+    "PM Surya Ghar Yojana – ₹૭૮,૦૦૦ Subsidy",
+    "ગુજરાત Solar India #1 — Skylar India સાથે Switch!",
+    "ખેડૂત ભાઈઓ — PM-KUSUM Pump ૬૦–૯૦% Subsidy",
+    "MNRE-Approved Vendor — Free Subsidy Help",
+    "ફ્રી Site Survey — +91 85302 52952"
+  ],
+
+  "services": {
+    "label": "અમારી સેવાઓ",
+    "title": "ત્રણ",
+    "title_highlight": "Solar Solutions",
+    "subtitle": "ઘર, ખેત, ધંધા — ત્રણ ક્ષેત્ર, Perfect Solar Installation."
+  },
+
+  "counters": [
+    { "label": "+ ઇન્સ્ટૉલ સિસ્ટમ" },
+    { "label": "+ ગ્રામ-પંચાયત" },
+    { "label": "% Bill ઘટ" },
+    { "label": "+ ખુશ ગ્રાહક" }
+  ],
+
+  "about": {
+    "label": "અમારા વિશે",
+    "title": "ખેડા ની",
+    "title_highlight": "વિશ્વાસ",
+    "title_suffix": "ભરી Team",
+    "subtitle": "Skylar India ૫+ વર્ષ — ખેડા, ગુજરાત ના ઘર, ખેત, ધંધા ને Solar Energy self-reliant. MNRE-Approved, Certified Team.",
+    "pillars": [
+      {
+        "icon": "🏆",
+        "title": "MNRE Certified",
+        "text": "Ministry of New & Renewable Energy approved. Govt Subsidy claim guarantee."
+      },
+      {
+        "icon": "🔧",
+        "title": "End-to-End Service",
+        "text": "Survey, Design, Install, Net Meter, Subsidy, AMC — બધું Skylar India."
+      },
+      {
+        "icon": "💰",
+        "title": "Zero Cost Finance",
+        "text": "Collateral-free loan ~7% interest. Zero down-payment EMI option."
+      }
+    ],
+    "cta": "ફ્રી Consultation Book",
+    "badges": [
+      { "value": "₹78K", "label": "PM Surya Ghar Subsidy" },
+      { "value": "25yr", "label": "Panel Warranty" },
+      { "value": "300",  "label": "Units/Month ફ્રી" },
+      { "value": "4–6yr","label": "Payback Period" }
+    ],
+    "subsidy_title": "PM Surya Ghar Subsidy Table"
+  },
+
+  "how": {
+    "label": "Step-by-Step Process",
+    "title": "Solar —",
+    "title_highlight": "5 Easy Steps"
+  },
+
+  "faq": {
+    "label": "વારંવાર પૂછાતા પ્રશ્નો",
+    "title": "Solar વિશે",
+    "title_highlight": "સૌ સવાલ"
+  },
+
+  "testimonials": {
+    "label": "ગ્રાહક અભિપ્રાય",
+    "title": "ગ્રાહકો",
+    "title_highlight": "શું કહે?"
+  },
+
+  "contact": {
+    "label": "સંપર્ક",
+    "title": "આજે",
+    "title_highlight": "ફ્રી Survey",
+    "title_suffix": "Book",
+    "subtitle": "Free survey, custom quote, subsidy calculation — zero obligation. ૨૪ hours response.",
+    "address_label": "સરનામું",
+    "phone_label": "ફોન",
+    "hours_label": "સમય",
+    "hours_value": "સોમ–શનિ: ૯:00 – ૭:00"
+  },
+
+  "footer": {
+    "tagline": "ખેડા, ગુજરાત ની MNRE Certified Solar Company. ઘર, ખેત, ધંધા — ત્રણ, એક ભરોસો.",
+    "quick_links": "ઝડપી Link",
+    "subsidy_help": "Subsidy Help"
+  }
+}

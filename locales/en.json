@@ -1,0 +1,120 @@
+{
+  "lang": "en",
+  "dir": "ltr",
+
+  "nav": {
+    "services": "Services",
+    "about": "About",
+    "how": "How It Works",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "cta": "📞 Free Survey"
+  },
+
+  "hero": {
+    "badge": "Gujarat's #1 MNRE-Certified Solar Partner • Kheda",
+    "title_line1": "Power Your Home",
+    "title_highlight": "Free Electricity,",
+    "title_line3": "Bright Future",
+    "subtitle": "Get ₹78,000 subsidy under PM Surya Ghar Yojana. Solar for home, farm & business — 25-yr warranty, 3–5 yr payback.",
+    "btn_primary": "Book Free Survey",
+    "btn_secondary": "Call Now",
+    "stats": [
+      { "value": "500+", "label": "Installations" },
+      { "value": "5+",   "label": "Years Exp." },
+      { "value": "25yr", "label": "Panel Warranty" },
+      { "value": "24/7", "label": "Support" }
+    ]
+  },
+
+  "ticker": [
+    "PM Surya Ghar Yojana – Subsidy up to ₹78,000",
+    "Gujarat ranks #1 in India for Solar — Switch with Skylar!",
+    "Farmers — PM-KUSUM Solar Pump 60–90% Subsidy",
+    "MNRE-Approved Vendor — Free Subsidy Application Help",
+    "Free Site Survey — +91 85302 52952"
+  ],
+
+  "services": {
+    "label": "Our Services",
+    "title": "Three",
+    "title_highlight": "Solar Solutions",
+    "subtitle": "Home, farm, business — complete solar installation for all three sectors."
+  },
+
+  "counters": [
+    { "label": "+ Systems Installed" },
+    { "label": "+ Villages Covered" },
+    { "label": "% Bill Reduction" },
+    { "label": "+ Happy Customers" }
+  ],
+
+  "about": {
+    "label": "About Us",
+    "title": "Kheda's",
+    "title_highlight": "Trusted",
+    "title_suffix": "Solar Team",
+    "subtitle": "5+ years making homes, farms & businesses of Kheda, Gujarat energy-independent. MNRE-approved, certified team.",
+    "pillars": [
+      {
+        "icon": "🏆",
+        "title": "MNRE Certified",
+        "text": "Ministry of New & Renewable Energy approved — guaranteed subsidy claim assistance."
+      },
+      {
+        "icon": "🔧",
+        "title": "End-to-End Service",
+        "text": "Survey, design, install, net metering, subsidy, AMC — all handled by Skylar India."
+      },
+      {
+        "icon": "💰",
+        "title": "Zero Cost Finance",
+        "text": "Collateral-free loans at ~7% interest. Zero down-payment EMI options available."
+      }
+    ],
+    "cta": "Book Free Consultation",
+    "badges": [
+      { "value": "₹78K", "label": "PM Surya Ghar Subsidy" },
+      { "value": "25yr", "label": "Panel Warranty" },
+      { "value": "300",  "label": "Units/Month Free" },
+      { "value": "4–6yr","label": "Payback Period" }
+    ],
+    "subsidy_title": "PM Surya Ghar Subsidy Table"
+  },
+
+  "how": {
+    "label": "Step-by-Step Process",
+    "title": "Solar in",
+    "title_highlight": "5 Easy Steps"
+  },
+
+  "faq": {
+    "label": "Frequently Asked Questions",
+    "title": "All About",
+    "title_highlight": "Solar"
+  },
+
+  "testimonials": {
+    "label": "Customer Reviews",
+    "title": "What",
+    "title_highlight": "Customers Say"
+  },
+
+  "contact": {
+    "label": "Contact Us",
+    "title": "Book Your",
+    "title_highlight": "Free Survey",
+    "title_suffix": "",
+    "subtitle": "Free site survey, custom quote & subsidy calculation — zero obligation. 24-hour response.",
+    "address_label": "Address",
+    "phone_label": "Phone",
+    "hours_label": "Hours",
+    "hours_value": "Mon–Sat: 9:00 AM – 7:00 PM"
+  },
+
+  "footer": {
+    "tagline": "MNRE certified solar company in Kheda, Gujarat. Home, farm & business — one trusted partner.",
+    "quick_links": "Quick Links",
+    "subsidy_help": "Subsidy Help"
+  }
+}
