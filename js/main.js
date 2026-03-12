@@ -1,22 +1,14 @@
 /**
- * Skylar India Solar — Main JS
- * Renders all sections from i18n data, handles interactions.
+ * Skylar India Solar — Main JS (Modernized)
  */
 
-// ─── Company Data ──────────────────────────────────────────────
 const SITE = {
   phone: "+918530252952",
   phoneDisplay: "+91 85302 52952",
   email: "darshansolarkheda@gmail.com",
   whatsapp: "https://wa.me/918530252952?text=Hello%2C+I+want+a+free+solar+survey.",
-  address: "Shop No. 3, Sardar Patel Shopping Center,\nSardar Market, Kheda – 387411, Gujarat",
-  googleFormUrl: "https://docs.google.com/forms/d/e/1FAIpQLSdfSP_04DuYMdhI3GDNzVFW1wnb8lMzYTMic3NIiNTMGEM_pA/viewform?embedded=true",
-  mapUrl: "https://maps.app.goo.gl/kheda",
-  rating: "4.9",
-  reviewCount: 347
 };
 
-// ─── SVG Icons ─────────────────────────────────────────────────
 const ICONS = {
   home: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z"/><path d="M9 21V12h6v9"/></svg>`,
   farm: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2a7 7 0 017 7c0 5-7 13-7 13S5 14 5 9a7 7 0 017-7z"/><circle cx="12" cy="9" r="2.5"/><path d="M2 20h20"/></svg>`,
@@ -25,7 +17,7 @@ const ICONS = {
   green: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22V12M12 12C12 6 17 3 21 3c0 4-2 8-9 9zM12 12C12 6 7 3 3 3c0 4 2 8 9 9z"/></svg>`,
   subsidy: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 14l6-6M9.5 8.5h.01M14.5 13.5h.01"/><circle cx="12" cy="12" r="9"/></svg>`,
   warranty: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9,12 11,14 15,10"/></svg>`,
-  meter: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/><path d="M6.3 17.7l1.4-1.4"/><path d="M17.7 17.7l-1.4-1.4"/><path d="M7 12H4"/><path d="M20 12h-3"/></svg>`,
+  meter: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>`,
   finance: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>`,
   certified: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="6"/><path d="M8.5 14.5L7 22l5-3 5 3-1.5-7.5"/></svg>`,
   service: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>`,
@@ -40,48 +32,30 @@ const ICONS = {
   whatsapp: `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.955 0C5.362 0 0 5.373 0 11.979c0 2.099.546 4.12 1.586 5.894L.057 24l6.305-1.652a11.956 11.956 0 005.593 1.391h.005C18.352 23.739 24 18.366 24 11.76 24 5.373 18.548 0 11.955 0zm0 21.766a9.935 9.935 0 01-5.046-1.371l-.361-.214-3.742.981.999-3.648-.236-.374a9.905 9.905 0 01-1.519-5.301c0-5.484 4.46-9.944 9.942-9.944 2.659 0 5.156 1.037 7.033 2.919a9.878 9.878 0 012.91 7.028c-.003 5.487-4.463 9.924-9.98 9.924z"/></svg>`,
   star: `<svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>`,
   chevron: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6,9 12,15 18,9"/></svg>`,
-  sun: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>`,
-  menu: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>`,
-  close: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>`
+  sun: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>`
 };
 
-// ─── Helpers ───────────────────────────────────────────────────
-function icon(name) {
-  return `<span class="icon">${ICONS[name] || ''}</span>`;
-}
-function stars(n) {
-  return Array(n).fill(`<span class="star">${ICONS.star}</span>`).join('');
-}
-function nl2br(str) {
-  return (str || '').replace(/\n/g, '<br>');
-}
-
-// ─── Render Functions ──────────────────────────────────────────
+function icon(name) { return `<span class="icon">${ICONS[name] || ''}</span>`; }
+function stars(n) { return Array(n).fill(`<span class="star">${ICONS.star}</span>`).join(''); }
 
 function renderNav() {
   const t = k => I18N.t(k);
   const lang = I18N.getLang();
-  document.getElementById('nav-services').textContent = t('nav.services');
-  document.getElementById('nav-about').textContent = t('nav.about');
-  document.getElementById('nav-how').textContent = t('nav.how');
-  document.getElementById('nav-faq').textContent = t('nav.faq');
-  document.getElementById('nav-contact').textContent = t('nav.contact');
+  ['services','about','how','faq','contact'].forEach(k => {
+    const el = document.getElementById(`nav-${k}`);
+    const mob = document.getElementById(`mob-${k}`);
+    if (el) el.textContent = t(`nav.${k}`);
+    if (mob) mob.textContent = t(`nav.${k}`);
+  });
   document.getElementById('nav-cta').textContent = t('nav.cta');
-  document.getElementById('mob-services').textContent = t('nav.services');
-  document.getElementById('mob-about').textContent = t('nav.about');
-  document.getElementById('mob-how').textContent = t('nav.how');
-  document.getElementById('mob-faq').textContent = t('nav.faq');
-  document.getElementById('mob-contact').textContent = t('nav.contact');
   document.getElementById('mob-cta').textContent = t('nav.cta');
-  // Update lang switcher active state
   document.querySelectorAll('.lang-btn').forEach(btn => {
     btn.classList.toggle('active', btn.dataset.lang === lang);
   });
 }
 
 function renderHero() {
-  const data = I18N.getAll();
-  const en = I18N.getEN();
+  const data = I18N.getAll(); const en = I18N.getEN();
   const hero = data.hero || en.hero;
   document.getElementById('hero-badge').textContent = hero.badge;
   document.getElementById('hero-line1').textContent = hero.title_line1;
@@ -91,8 +65,7 @@ function renderHero() {
   document.getElementById('hero-btn-primary').textContent = hero.btn_primary;
   document.getElementById('hero-btn-secondary').textContent = hero.btn_secondary;
   const stats = hero.stats || en.hero.stats;
-  const container = document.getElementById('hero-stats');
-  container.innerHTML = stats.map(s => `
+  document.getElementById('hero-stats').innerHTML = stats.map(s => `
     <div class="stat-item">
       <div class="stat-value">${s.value}</div>
       <div class="stat-label">${s.label}</div>
@@ -101,19 +74,17 @@ function renderHero() {
 }
 
 function renderTicker() {
-  const data = I18N.getAll();
-  const en = I18N.getEN();
-  const items = (data.ticker || en.ticker);
+  const data = I18N.getAll(); const en = I18N.getEN();
+  const items = data.ticker || en.ticker;
   const track = document.getElementById('ticker-track');
   const html = items.map(t => `<span class="ticker-item">${t}</span>`).join('');
-  track.innerHTML = html + html; // duplicate for seamless loop
+  track.innerHTML = html + html;
 }
 
 function renderServices() {
-  const data = I18N.getAll();
-  const en = I18N.getEN();
+  const data = I18N.getAll(); const en = I18N.getEN();
   const s = data.services || en.services;
-  const items = (s.items || en.services.items);
+  const items = s.items || en.services.items;
   document.getElementById('services-label').textContent = s.label;
   document.getElementById('services-title').textContent = s.title;
   document.getElementById('services-highlight').textContent = s.title_highlight;
@@ -132,8 +103,7 @@ function renderServices() {
 }
 
 function renderBenefits() {
-  const data = I18N.getAll();
-  const en = I18N.getEN();
+  const data = I18N.getAll(); const en = I18N.getEN();
   const b = data.benefits || en.benefits;
   const items = b.items || en.benefits.items;
   document.getElementById('benefits-label').textContent = b.label;
@@ -142,15 +112,16 @@ function renderBenefits() {
   document.getElementById('benefits-grid').innerHTML = items.map(item => `
     <div class="benefit-card">
       <div class="benefit-icon">${ICONS[item.icon] || ''}</div>
-      <h4>${item.title}</h4>
-      <p>${item.desc}</p>
+      <div class="benefit-body">
+        <h4>${item.title}</h4>
+        <p>${item.desc}</p>
+      </div>
     </div>
   `).join('');
 }
 
 function renderCounters() {
-  const data = I18N.getAll();
-  const en = I18N.getEN();
+  const data = I18N.getAll(); const en = I18N.getEN();
   const counters = data.counters || en.counters;
   const siteCnt = [
     { target: 500, suffix: '+' },
@@ -167,20 +138,16 @@ function renderCounters() {
 }
 
 function renderAbout() {
-  const data = I18N.getAll();
-  const en = I18N.getEN();
+  const data = I18N.getAll(); const en = I18N.getEN();
   const a = data.about || en.about;
   document.getElementById('about-label').textContent = a.label;
-  document.getElementById('about-title').innerHTML = `${a.title} <span class="highlight">${a.title_highlight}</span>`;
+  document.getElementById('about-title').innerHTML = `${a.title} <span class="hl">${a.title_highlight}</span>`;
   document.getElementById('about-subtitle').textContent = a.subtitle;
   const pillars = a.pillars || en.about.pillars;
   document.getElementById('about-pillars').innerHTML = pillars.map(p => `
     <div class="pillar">
-      <div class="pillar-icon">${ICONS[p.icon] || p.icon}</div>
-      <div>
-        <h4>${p.title}</h4>
-        <p>${p.text}</p>
-      </div>
+      <div class="pillar-icon">${ICONS[p.icon] || ''}</div>
+      <div><h4>${p.title}</h4><p>${p.text}</p></div>
     </div>
   `).join('');
   document.getElementById('about-cta').textContent = a.cta;
@@ -194,16 +161,12 @@ function renderAbout() {
   const table = a.subsidy_table || en.about.subsidy_table;
   document.getElementById('subsidy-title').textContent = a.subsidy_title;
   document.getElementById('subsidy-table').innerHTML = table.map(row => `
-    <tr>
-      <td>${row.capacity}</td>
-      <td class="subsidy-amount">${row.subsidy}</td>
-    </tr>
+    <tr><td>${row.capacity}</td><td class="subsidy-amount">${row.subsidy}</td></tr>
   `).join('');
 }
 
 function renderHow() {
-  const data = I18N.getAll();
-  const en = I18N.getEN();
+  const data = I18N.getAll(); const en = I18N.getEN();
   const h = data.how || en.how;
   const steps = h.steps || en.how.steps;
   document.getElementById('how-label').textContent = h.label;
@@ -220,8 +183,7 @@ function renderHow() {
 }
 
 function renderFAQ() {
-  const data = I18N.getAll();
-  const en = I18N.getEN();
+  const data = I18N.getAll(); const en = I18N.getEN();
   const f = data.faq || en.faq;
   const items = f.items || en.faq.items;
   document.getElementById('faq-label').textContent = f.label;
@@ -233,16 +195,13 @@ function renderFAQ() {
         <span>${item.q}</span>
         <span class="faq-chevron">${ICONS.chevron}</span>
       </button>
-      <div class="faq-answer">
-        <p>${item.a}</p>
-      </div>
+      <div class="faq-answer"><p>${item.a}</p></div>
     </div>
   `).join('');
 }
 
 function renderTestimonials() {
-  const data = I18N.getAll();
-  const en = I18N.getEN();
+  const data = I18N.getAll(); const en = I18N.getEN();
   const t = data.testimonials || en.testimonials;
   const items = t.items || en.testimonials.items;
   document.getElementById('testimonials-label').textContent = t.label;
@@ -264,8 +223,7 @@ function renderTestimonials() {
 }
 
 function renderContact() {
-  const data = I18N.getAll();
-  const en = I18N.getEN();
+  const data = I18N.getAll(); const en = I18N.getEN();
   const c = data.contact || en.contact;
   const f = c.form || en.contact.form;
   document.getElementById('contact-label').textContent = c.label;
@@ -287,8 +245,7 @@ function renderContact() {
 }
 
 function renderFooter() {
-  const data = I18N.getAll();
-  const en = I18N.getEN();
+  const data = I18N.getAll(); const en = I18N.getEN();
   const f = data.footer || en.footer;
   const links = (data.footer && data.footer.subsidy_links) || en.footer.subsidy_links;
   document.getElementById('footer-tagline').textContent = f.tagline;
@@ -301,18 +258,9 @@ function renderFooter() {
 }
 
 function renderAll() {
-  renderNav();
-  renderHero();
-  renderTicker();
-  renderServices();
-  renderBenefits();
-  renderCounters();
-  renderAbout();
-  renderHow();
-  renderFAQ();
-  renderTestimonials();
-  renderContact();
-  renderFooter();
+  renderNav(); renderHero(); renderTicker(); renderServices();
+  renderBenefits(); renderCounters(); renderAbout(); renderHow();
+  renderFAQ(); renderTestimonials(); renderContact(); renderFooter();
 }
 
 // ─── FAQ Toggle ────────────────────────────────────────────────
@@ -349,12 +297,18 @@ function initMobileMenu() {
   const toggle = document.getElementById('menu-toggle');
   const menu = document.getElementById('mobile-menu');
   const overlay = document.getElementById('menu-overlay');
-  function close() { menu.classList.remove('open'); overlay.classList.remove('active'); }
+  function close() {
+    menu.classList.remove('open');
+    overlay.classList.remove('active');
+    toggle.setAttribute('aria-expanded', 'false');
+  }
   toggle.addEventListener('click', () => {
     menu.classList.toggle('open');
     overlay.classList.toggle('active');
+    toggle.setAttribute('aria-expanded', menu.classList.contains('open'));
   });
   overlay.addEventListener('click', close);
+  document.getElementById('menu-close').addEventListener('click', close);
   menu.querySelectorAll('a').forEach(a => a.addEventListener('click', close));
 }
 
@@ -362,18 +316,21 @@ function initMobileMenu() {
 function initStickyNav() {
   const nav = document.querySelector('.navbar');
   window.addEventListener('scroll', () => {
-    nav.classList.toggle('scrolled', window.scrollY > 50);
-  });
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+  }, { passive: true });
 }
 
-// ─── Smooth reveal on scroll ───────────────────────────────────
+// ─── Reveal + Stagger ──────────────────────────────────────────
 function initReveal() {
   const observer = new IntersectionObserver(entries => {
     entries.forEach(e => {
-      if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
     });
-  }, { threshold: 0.1 });
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.reveal, .stagger').forEach(el => observer.observe(el));
 }
 
 // ─── Contact Form ──────────────────────────────────────────────
