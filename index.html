@@ -37,7 +37,7 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -105,8 +105,9 @@
 
 <!-- ═══ HERO ════════════════════════════════════════════════════ -->
 <header class="hero" id="home">
-  <div class="hero-glow"></div>
-  <div class="hero-glow2"></div>
+  <div class="hero-orb hero-orb-1"></div>
+  <div class="hero-orb hero-orb-2"></div>
+  <div class="hero-orb hero-orb-3"></div>
   <div class="wrap hero-inner">
     <div class="hero-content">
       <div class="hero-badge" id="hero-badge">Gujarat's #1 MNRE-Certified Solar Partner • Kheda</div>
@@ -125,123 +126,60 @@
       <div class="hero-stats" id="hero-stats" role="list"></div>
     </div>
     <div class="hero-visual" aria-hidden="true">
-      <svg class="solar-panel-svg" viewBox="0 0 480 360" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stop-color="#0D1F35"/>
-            <stop offset="100%" stop-color="#1E3A5F"/>
-          </linearGradient>
-          <linearGradient id="roofGrad" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stop-color="#7a3c10"/>
-            <stop offset="100%" stop-color="#5a2d0c"/>
-          </linearGradient>
-          <linearGradient id="panelGrad" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stop-color="#1e3a5f"/>
-            <stop offset="100%" stop-color="#0d2540"/>
-          </linearGradient>
-          <radialGradient id="sunRad" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" stop-color="#F5A623"/>
-            <stop offset="100%" stop-color="#FF8C00" stop-opacity="0"/>
-          </radialGradient>
-          <filter id="glow">
-            <feGaussianBlur stdDeviation="6" result="blur"/>
-            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-          </filter>
-        </defs>
-        <rect width="480" height="360" fill="url(#skyGrad)" rx="16"/>
-        <!-- Stars -->
-        <circle cx="40" cy="30" r="1.5" fill="white" opacity="0.6"/>
-        <circle cx="180" cy="20" r="1" fill="white" opacity="0.4"/>
-        <circle cx="300" cy="40" r="1.5" fill="white" opacity="0.5"/>
-        <circle cx="60" cy="90" r="1" fill="white" opacity="0.3"/>
-        <!-- Sun glow -->
-        <circle cx="378" cy="78" r="62" fill="url(#sunRad)" opacity="0.5"/>
-        <circle cx="378" cy="78" r="30" fill="#F5A623" filter="url(#glow)"/>
-        <g stroke="#F5A623" stroke-width="2.5" stroke-linecap="round" opacity="0.65">
-          <line x1="378" y1="38" x2="378" y2="28"/>
-          <line x1="378" y1="118" x2="378" y2="128"/>
-          <line x1="338" y1="78" x2="328" y2="78"/>
-          <line x1="418" y1="78" x2="428" y2="78"/>
-          <line x1="349" y1="49" x2="342" y2="42"/>
-          <line x1="407" y1="107" x2="414" y2="114"/>
-          <line x1="407" y1="49" x2="414" y2="42"/>
-          <line x1="349" y1="107" x2="342" y2="114"/>
-        </g>
-        <!-- Clouds -->
-        <ellipse cx="80" cy="68" rx="42" ry="16" fill="white" opacity="0.1"/>
-        <ellipse cx="108" cy="58" rx="28" ry="14" fill="white" opacity="0.08"/>
-        <!-- House -->
-        <rect x="80" y="200" width="320" height="160" fill="#e0cbb0" rx="3"/>
-        <!-- Door -->
-        <rect x="212" y="272" width="56" height="88" fill="#8b6914" rx="3"/>
-        <circle cx="260" cy="318" r="3.5" fill="#F5A623"/>
-        <!-- Windows -->
-        <rect x="102" y="228" width="58" height="48" fill="#4FA3FF" opacity="0.75" rx="3"/>
-        <line x1="131" y1="228" x2="131" y2="276" stroke="white" stroke-width="1.5"/>
-        <line x1="102" y1="252" x2="160" y2="252" stroke="white" stroke-width="1.5"/>
-        <rect x="320" y="228" width="58" height="48" fill="#4FA3FF" opacity="0.75" rx="3"/>
-        <line x1="349" y1="228" x2="349" y2="276" stroke="white" stroke-width="1.5"/>
-        <line x1="320" y1="252" x2="378" y2="252" stroke="white" stroke-width="1.5"/>
-        <!-- Roof -->
-        <polygon points="60,205 240,112 420,205" fill="url(#roofGrad)"/>
-        <line x1="60" y1="205" x2="420" y2="205" stroke="#4a2408" stroke-width="2.5"/>
-        <!-- Solar panels group -->
-        <g transform="translate(140, 142) rotate(-15, 100, 40)">
-          <rect x="0" y="0" width="78" height="50" fill="url(#panelGrad)" rx="2"/>
-          <rect x="0" y="0" width="78" height="50" fill="none" stroke="#3B9EFF" stroke-width="0.6" rx="2"/>
-          <line x1="19" y1="0" x2="19" y2="50" stroke="#3B9EFF" stroke-width="0.5" opacity="0.45"/>
-          <line x1="39" y1="0" x2="39" y2="50" stroke="#3B9EFF" stroke-width="0.5" opacity="0.45"/>
-          <line x1="59" y1="0" x2="59" y2="50" stroke="#3B9EFF" stroke-width="0.5" opacity="0.45"/>
-          <line x1="0" y1="16" x2="78" y2="16" stroke="#3B9EFF" stroke-width="0.5" opacity="0.45"/>
-          <line x1="0" y1="33" x2="78" y2="33" stroke="#3B9EFF" stroke-width="0.5" opacity="0.45"/>
-          <rect x="2" y="2" width="74" height="46" fill="#3B9EFF" opacity="0.04" rx="1"/>
-
-          <rect x="86" y="0" width="78" height="50" fill="url(#panelGrad)" rx="2"/>
-          <rect x="86" y="0" width="78" height="50" fill="none" stroke="#3B9EFF" stroke-width="0.6" rx="2"/>
-          <line x1="105" y1="0" x2="105" y2="50" stroke="#3B9EFF" stroke-width="0.5" opacity="0.45"/>
-          <line x1="125" y1="0" x2="125" y2="50" stroke="#3B9EFF" stroke-width="0.5" opacity="0.45"/>
-          <line x1="145" y1="0" x2="145" y2="50" stroke="#3B9EFF" stroke-width="0.5" opacity="0.45"/>
-          <line x1="86" y1="16" x2="164" y2="16" stroke="#3B9EFF" stroke-width="0.5" opacity="0.45"/>
-          <line x1="86" y1="33" x2="164" y2="33" stroke="#3B9EFF" stroke-width="0.5" opacity="0.45"/>
-
-          <rect x="0" y="58" width="78" height="50" fill="url(#panelGrad)" rx="2"/>
-          <rect x="0" y="58" width="78" height="50" fill="none" stroke="#3B9EFF" stroke-width="0.6" rx="2"/>
-          <line x1="19" y1="58" x2="19" y2="108" stroke="#3B9EFF" stroke-width="0.5" opacity="0.45"/>
-          <line x1="39" y1="58" x2="39" y2="108" stroke="#3B9EFF" stroke-width="0.5" opacity="0.45"/>
-          <line x1="59" y1="58" x2="59" y2="108" stroke="#3B9EFF" stroke-width="0.5" opacity="0.45"/>
-          <line x1="0" y1="74" x2="78" y2="74" stroke="#3B9EFF" stroke-width="0.5" opacity="0.45"/>
-          <line x1="0" y1="91" x2="78" y2="91" stroke="#3B9EFF" stroke-width="0.5" opacity="0.45"/>
-
-          <rect x="86" y="58" width="78" height="50" fill="url(#panelGrad)" rx="2"/>
-          <rect x="86" y="58" width="78" height="50" fill="none" stroke="#3B9EFF" stroke-width="0.6" rx="2"/>
-          <line x1="105" y1="58" x2="105" y2="108" stroke="#3B9EFF" stroke-width="0.5" opacity="0.45"/>
-          <line x1="125" y1="58" x2="125" y2="108" stroke="#3B9EFF" stroke-width="0.5" opacity="0.45"/>
-          <line x1="145" y1="58" x2="145" y2="108" stroke="#3B9EFF" stroke-width="0.5" opacity="0.45"/>
-          <line x1="86" y1="74" x2="164" y2="74" stroke="#3B9EFF" stroke-width="0.5" opacity="0.45"/>
-          <line x1="86" y1="91" x2="164" y2="91" stroke="#3B9EFF" stroke-width="0.5" opacity="0.45"/>
-        </g>
-        <!-- Energy flow -->
-        <g stroke="#F5A623" stroke-width="1.5" stroke-dasharray="5,4" opacity="0.5">
-          <line x1="240" y1="195" x2="240" y2="258"/>
-        </g>
-        <!-- Ground -->
-        <rect x="0" y="342" width="480" height="18" fill="#1e4a18" opacity="0.35" rx="0"/>
-        <!-- Badges -->
-        <g transform="translate(18, 295)">
-          <rect width="98" height="42" fill="white" rx="9" opacity="0.95"/>
-          <text x="10" y="15" font-size="8.5" fill="#637386" font-family="sans-serif" font-weight="700">GOOGLE RATING</text>
-          <text x="10" y="31" font-size="13" fill="#F5A623" font-family="sans-serif" font-weight="800">★ 4.9</text>
-          <text x="52" y="31" font-size="8.5" fill="#637386" font-family="sans-serif">(347)</text>
-        </g>
-        <g transform="translate(344, 295)">
-          <rect width="118" height="42" fill="#F5A623" rx="9" opacity="0.96"/>
-          <text x="9" y="15" font-size="8.5" fill="#0D1F35" font-family="sans-serif" font-weight="700">GOVT SUBSIDY</text>
-          <text x="9" y="33" font-size="15" fill="#0D1F35" font-family="sans-serif" font-weight="800">₹78,000</text>
-        </g>
-      </svg>
+      <div class="hero-dashboard">
+        <div class="dash-header">
+          <div class="dash-title">Solar Live Output</div>
+          <div class="dash-live">LIVE</div>
+        </div>
+        <div class="dash-power">
+          <div class="sun-ring"></div>
+          <div class="sun-ring"></div>
+          <div class="sun-ring"></div>
+          <div class="dash-power-value">4.8</div>
+          <div class="dash-power-unit">kW GENERATING NOW</div>
+          <div class="dash-power-label">Peak output: 5.2 kW today at 12:30 PM</div>
+        </div>
+        <div class="dash-metrics">
+          <div class="dash-metric">
+            <div class="dash-metric-val">₹0</div>
+            <div class="dash-metric-lbl">THIS MONTH</div>
+          </div>
+          <div class="dash-metric">
+            <div class="dash-metric-val">312</div>
+            <div class="dash-metric-lbl">kWh SAVED</div>
+          </div>
+          <div class="dash-metric">
+            <div class="dash-metric-val">218kg</div>
+            <div class="dash-metric-lbl">CO₂ OFFSET</div>
+          </div>
+        </div>
+        <div class="dash-bar-wrap">
+          <div class="dash-bar-label">
+            <span>Grid Export Today</span>
+            <strong>78%</strong>
+          </div>
+          <div class="dash-bar-track">
+            <div class="dash-bar-fill" style="width:78%"></div>
+          </div>
+        </div>
+        <div class="dash-bar-wrap">
+          <div class="dash-bar-label">
+            <span>Self Consumption</span>
+            <strong>22%</strong>
+          </div>
+          <div class="dash-bar-track">
+            <div class="dash-bar-fill" style="width:22%; animation-delay: 1.2s;"></div>
+          </div>
+        </div>
+        <div class="dash-subsidy">
+          <div class="dash-subsidy-text">PM Surya Ghar Subsidy Available</div>
+          <div class="dash-subsidy-amt">₹78,000</div>
+        </div>
+      </div>
     </div>
   </div>
 </header>
+
 
 <!-- ═══ TICKER ═══════════════════════════════════════════════════ -->
 <div class="ticker-bar" role="marquee" aria-label="Offers and news">
@@ -332,7 +270,7 @@
       <span class="label" id="how-label">Step-by-Step Process</span>
       <h2><span id="how-title">Go Solar in</span><span class="hl" id="how-highlight"> 5 Easy Steps</span></h2>
     </div>
-    <div class="steps-grid stagger" id="how-steps"></div>
+    <div class="steps-grid stagger" id="how-steps"><div class="steps-connector"></div></div>
   </div>
 </section>
 
