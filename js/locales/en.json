@@ -1,241 +1,91 @@
 {
   "lang": "en",
   "dir": "ltr",
-  "meta": {
-    "title": "Skylar India Solar Energy — MNRE Certified Solar Company in Kheda, Gujarat",
-    "description": "Gujarat's #1 MNRE-certified solar panel installation company. Get ₹78,000 subsidy under PM Surya Ghar Yojana. Residential, agricultural & commercial solar in Kheda, Anand, Nadiad."
-  },
   "nav": {
     "services": "Services",
-    "about": "About",
-    "how": "How It Works",
-    "faq": "FAQ",
     "contact": "Contact",
-    "cta": "Free Survey"
+    "cta": "Book Free Survey"
   },
   "hero": {
-    "badge": "Gujarat's #1 MNRE-Certified Solar Partner • Kheda",
-    "title_line1": "Power Your Home With",
-    "title_highlight": "Free Electricity",
-    "title_line3": "& A Brighter Future",
-    "subtitle": "Get ₹78,000 subsidy under PM Surya Ghar Yojana. Solar for home, farm & business — 25-yr warranty, 3–5 yr payback.",
+    "badge": "MNRE Certified • Kheda, Gujarat",
+    "title_line1": "Solar Power.",
+    "title_line2": "Zero Bill.",
+    "title_line3": "₹78,000 Subsidy.",
+    "subtitle": "Gujarat's most trusted solar installer. Home, farm & business — installed in 1–3 days with 25-year warranty.",
+    "subsidy_strip": "1 kW = ₹30,000  •  2 kW = ₹60,000  •  3 kW+ = ₹78,000 Government Subsidy",
     "btn_primary": "Book Free Survey",
-    "btn_secondary": "Call Now",
+    "btn_call": "Call Now",
     "stats": [
-      { "value": "500+", "label": "Installations" },
-      { "value": "5+",   "label": "Years Exp." },
-      { "value": "25yr", "label": "Panel Warranty" },
+      { "value": "500+", "label": "Installs" },
+      { "value": "4.9★", "label": "Google" },
+      { "value": "25yr", "label": "Warranty" },
       { "value": "24/7", "label": "Support" }
     ]
   },
-  "ticker": [
-    "PM Surya Ghar Yojana – Subsidy up to ₹78,000",
-    "Gujarat ranks #1 in India for Solar — Switch with Skylar!",
-    "Farmers — PM-KUSUM Solar Pump 60–90% Subsidy",
-    "MNRE-Approved Vendor — Free Subsidy Application Help",
-    "Free Site Survey — +91 85302 52952"
+  "trust": [
+    { "icon": "shield", "text": "MNRE Certified" },
+    { "icon": "star",   "text": "4.9★ (347 Reviews)" },
+    { "icon": "bolt",   "text": "₹78,000 Subsidy" },
+    { "icon": "clock",  "text": "25-Year Warranty" }
   ],
   "services": {
-    "label": "Our Services",
-    "title": "Complete Solar Solutions",
-    "title_highlight": "For Every Need",
-    "subtitle": "Home, farm, business — expert solar installation across all sectors with end-to-end support.",
+    "label": "What We Do",
+    "title": "Solar for Every Need",
     "items": [
       {
         "icon": "home",
-        "title": "Residential Solar",
-        "desc": "1kW–10kW on-grid rooftop. Reduce electricity bill by 90%. Sell extra units via net metering.",
-        "features": [
-          "₹30,000–₹78,000 govt subsidy",
-          "3–5 year payback period",
-          "25-year panel performance warranty",
-          "Zero down-payment EMI available"
-        ]
+        "title": "Residential",
+        "desc": "1–10 kW rooftop solar. Cut your bill by 90%. Sell extra units back to the grid.",
+        "tag": "Most Popular"
       },
       {
         "icon": "farm",
-        "title": "Agricultural Solar",
-        "desc": "PM-KUSUM Yojana — 60–90% subsidy on solar water pumps. Free irrigation 24/7.",
-        "features": [
-          "PM-KUSUM 60–90% subsidy",
-          "3HP–10HP solar pump systems",
-          "Save ₹80,000+/year vs diesel",
-          "Ground-mount & tracker options"
-        ]
+        "title": "Agricultural",
+        "desc": "PM-KUSUM solar pumps with 60–90% subsidy. Free irrigation, zero diesel cost.",
+        "tag": "Farmers"
       },
       {
         "icon": "commercial",
-        "title": "Commercial Solar",
-        "desc": "Factory, shop, school — cut heavy energy bills. On-grid / hybrid / off-grid systems.",
-        "features": [
-          "40% accelerated depreciation benefit",
-          "4–7 year ROI payback",
-          "On-grid / Hybrid / Off-grid",
-          "Remote monitoring & AMC"
-        ]
+        "title": "Commercial",
+        "desc": "Factory, school, shop — on-grid or hybrid. 40% depreciation + 4–7 yr payback.",
+        "tag": "Business"
       }
     ]
   },
-  "benefits": {
-    "label": "Solar Benefits",
-    "title": "Why Solar Makes",
-    "title_highlight": "Smart Sense",
-    "items": [
-      { "icon": "savings", "title": "Cut Your Bill by 90%", "desc": "Drastically reduce monthly electricity expenses with Gujarat's 300+ sunny days powering your system." },
-      { "icon": "green", "title": "Clean Renewable Energy", "desc": "Zero emissions, zero fuel costs. Contribute to a greener India with solar power from sunlight." },
-      { "icon": "subsidy", "title": "Govt Subsidy Up to ₹78K", "desc": "PM Surya Ghar Yojana offers up to ₹78,000 subsidy. We handle all paperwork free of charge." },
-      { "icon": "warranty", "title": "25-Year Panel Warranty", "desc": "Industry-leading warranty ensures your solar panels perform at 80%+ efficiency for 25 years." },
-      { "icon": "meter", "title": "Net Metering Credits", "desc": "Sell excess solar units back to the grid and earn credits that further reduce your electricity bill." },
-      { "icon": "finance", "title": "Zero Down-Payment EMI", "desc": "Collateral-free loans at ~7% interest with EMI options from just ₹300/month." }
-    ]
-  },
-  "counters": [
-    { "target": 500,  "suffix": "+", "label": "Systems Installed" },
-    { "target": 25,   "suffix": "+", "label": "Villages Covered" },
-    { "target": 90,   "suffix": "%", "label": "Bill Reduction" },
-    { "target": 1200, "suffix": "+", "label": "Happy Customers" }
+  "testimonials": [
+    {
+      "name": "Ramubhai Patel",
+      "location": "Kheda",
+      "stars": 5,
+      "text": "₹78,000 subsidy processed in 3 weeks. Monthly bill dropped from ₹3,500 to ₹200."
+    },
+    {
+      "name": "Bhaveshbhai Desai",
+      "location": "Kapadvanj",
+      "stars": 5,
+      "text": "PM-KUSUM pump installed. Diesel cost of ₹80,000/year is now completely zero!"
+    }
   ],
-  "about": {
-    "label": "About Us",
-    "title": "Kheda's Most Trusted",
-    "title_highlight": "Solar Partner",
-    "subtitle": "5+ years making homes, farms & businesses of Kheda, Gujarat energy-independent. MNRE-approved, certified team dedicated to clean energy.",
-    "pillars": [
-      {
-        "icon": "certified",
-        "title": "MNRE Certified",
-        "text": "Ministry of New & Renewable Energy approved — guaranteed subsidy claim assistance for every customer."
-      },
-      {
-        "icon": "service",
-        "title": "End-to-End Service",
-        "text": "Survey, design, install, net metering, subsidy, AMC — everything handled by Skylar India."
-      },
-      {
-        "icon": "finance",
-        "title": "Zero Cost Finance",
-        "text": "Collateral-free loans at ~7% interest. Zero down-payment EMI options available."
-      }
-    ],
-    "cta": "Book Free Consultation",
-    "badges": [
-      { "value": "₹78K", "label": "Max Subsidy" },
-      { "value": "25yr", "label": "Panel Warranty" },
-      { "value": "300",  "label": "Units/Month Free" },
-      { "value": "4–6yr","label": "Payback Period" }
-    ],
-    "subsidy_title": "PM Surya Ghar Subsidy Table",
-    "subsidy_table": [
-      { "capacity": "1 kW", "subsidy": "₹30,000" },
-      { "capacity": "2 kW", "subsidy": "₹60,000" },
-      { "capacity": "3 kW+", "subsidy": "₹78,000" },
-      { "capacity": "Bank Loan", "subsidy": "~7% (No Collateral)" }
-    ]
-  },
-  "how": {
-    "label": "Step-by-Step Process",
-    "title": "Go Solar in",
-    "title_highlight": "5 Easy Steps",
-    "steps": [
-      { "icon": "survey", "title": "Free Survey", "desc": "Our team visits your site for shadow, roof & system size analysis — at no cost." },
-      { "icon": "design", "title": "Design & Quote", "desc": "Custom system design with exact cost, savings & subsidy calculation provided." },
-      { "icon": "subsidy", "title": "Subsidy Apply", "desc": "We handle all DISCOM & PM Surya Ghar paperwork — completely free for you." },
-      { "icon": "install", "title": "Installation", "desc": "Certified team installs in 1–3 days with net meter commissioning." },
-      { "icon": "electric", "title": "Free Electricity!", "desc": "Subsidy credited to your account. System live. Lifetime AMC & 24/7 support begins." }
-    ]
-  },
-  "faq": {
-    "label": "Frequently Asked Questions",
-    "title": "Everything You Want to Know",
-    "title_highlight": "About Solar",
-    "items": [
-      {
-        "q": "How much does solar installation cost?",
-        "a": "3kW costs ₹1.6–2.15 lakh before subsidy. After PM Surya Ghar ₹78,000 subsidy, net cost is ₹82,000–1.07 lakh. EMI from ₹300/month. 1kW: ₹30K subsidy | 2kW: ₹60K | 3kW+: ₹78K."
-      },
-      {
-        "q": "How to apply for PM Surya Ghar in Gujarat?",
-        "a": "Register at pmsuryaghar.gov.in with your DISCOM consumer number. Skylar India handles all paperwork completely free. Subsidy credited within 30 days of installation."
-      },
-      {
-        "q": "How many units does a 3kW system generate daily?",
-        "a": "Gujarat has 300+ sunny days. A 3kW system generates 12–15 units/day (360–450/month), saving ₹2,500–3,500/month or ₹30,000–42,000/year."
-      },
-      {
-        "q": "When does my solar investment pay back?",
-        "a": "On-grid with subsidy: 3–5 year payback. Off-grid with battery: 5–7 years. Then 20+ years of free electricity. Total 25-year savings: ₹5–10 lakh+."
-      },
-      {
-        "q": "What solar pump subsidy is available for farmers?",
-        "a": "PM-KUSUM: Central 30% + State 30% = 60% on solar pumps (3–10HP). Small/marginal farmers get up to 90% subsidy. Annual savings vs diesel: ₹50,000–1,00,000+."
-      },
-      {
-        "q": "Is solar maintenance expensive?",
-        "a": "Panel cleaning: ₹500–1,000/year. Inverter check: ₹1,000–2,000. Skylar India AMC packages available. Panels maintain 80%+ efficiency for 25 years."
-      },
-      {
-        "q": "Does solar work on cloudy or rainy days?",
-        "a": "Cloudy days reduce output 10–25% but Gujarat's 300+ annual sunny days ensure excellent annual output. On-grid uses grid backup; hybrid has battery. Net metering covers rainy periods."
-      },
-      {
-        "q": "Will installation damage my roof?",
-        "a": "No! Waterproof sealants & professional mountings used. Compatible with RCC, metal & terracotta roofs. 1–3 day install with zero damage guarantee."
-      }
-    ]
-  },
-  "testimonials": {
-    "label": "Customer Reviews",
-    "title": "What Our",
-    "title_highlight": "Customers Say",
-    "items": [
-      {
-        "name": "Ramubhai Patel",
-        "location": "Kheda, Gujarat",
-        "stars": 5,
-        "text": "Very professional team. ₹78,000 PM Surya Ghar subsidy processed in 3 weeks. System installed in 2 days. Monthly bill now ₹200 — was ₹3,500!"
-      },
-      {
-        "name": "Bhaveshbhai Desai",
-        "location": "Kapadvanj, Kheda",
-        "stars": 5,
-        "text": "Got PM-KUSUM pump with ₹45,000 subsidy. Diesel cost of ₹80,000/year is now zero! Skylar India handled all paperwork at my doorstep."
-      },
-      {
-        "name": "Satishbhai Shah",
-        "location": "Nadiad, Gujarat",
-        "stars": 5,
-        "text": "100kW factory system installed. 4-year payback, saving ₹3 lakh/year on electricity! Skylar India is extremely punctual and responsive."
-      }
-    ]
-  },
   "contact": {
-    "label": "Get In Touch",
-    "title": "Book Your",
-    "title_highlight": "Free Site Survey",
-    "subtitle": "Free site survey, custom quote & subsidy calculation — zero obligation. 24-hour response guaranteed.",
-    "address_label": "Address",
-    "phone_label": "Phone",
-    "hours_label": "Hours",
-    "hours_value": "Mon–Sat: 9:00 AM – 7:00 PM",
+    "label": "Get Started",
+    "title": "Book Your Free Survey",
+    "subtitle": "Zero obligation. Custom quote + subsidy calculation. We reply within 24 hours.",
+    "phone": "+91 85302 52952",
+    "email": "darshansolarkheda@gmail.com",
+    "hours": "Mon–Sat  9 AM – 7 PM",
+    "address": "Shop No. 3, Sardar Market, Kheda – 387411",
     "form": {
-      "name": "Full Name",
+      "name": "Your Name",
       "phone": "Phone Number",
-      "address": "Your Address / Location",
-      "system": "System Type",
-      "system_options": ["Residential Solar", "Agricultural Solar Pump", "Commercial Solar"],
+      "location": "Your Village / Town",
+      "type": "System Type",
+      "types": ["Residential Solar", "Agricultural Pump", "Commercial Solar"],
       "submit": "Book Free Survey",
-      "whatsapp": "Chat on WhatsApp"
+      "whatsapp": "WhatsApp Us Instead"
     }
   },
   "footer": {
-    "tagline": "MNRE certified solar company in Kheda, Gujarat. Home, farm & business — one trusted partner for all your solar energy needs.",
-    "quick_links": "Quick Links",
-    "subsidy_help": "Subsidy Help",
-    "copyright": "© 2025 Skylar India Solar Energy. All rights reserved.",
-    "subsidy_links": [
-      { "label": "PM Surya Ghar Yojana", "url": "https://pmsuryaghar.gov.in" },
-      { "label": "MNRE Schemes", "url": "https://mnre.gov.in" },
-      { "label": "PM-KUSUM Yojana", "url": "#faq" }
-    ]
+    "tagline": "MNRE certified solar company in Kheda, Gujarat.",
+    "copyright": "© 2025 Skylar India Solar Energy"
   }
 }
