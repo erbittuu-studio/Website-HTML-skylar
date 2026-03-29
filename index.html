@@ -10,21 +10,61 @@
   <meta property="og:title" content="Skylar India Solar Energy — Gujarat's #1 Solar Partner">
   <meta property="og:description" content="MNRE Certified. ₹78,000 subsidy. Free site survey. Kheda, Gujarat.">
   <meta property="og:type" content="website">
+  <meta name="theme-color" content="#186338">
+
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"LocalBusiness","name":"Skylar India Solar Energy","telephone":"+918530252952","email":"darshansolarkheda@gmail.com","url":"https://skylarindia.com","address":{"@type":"PostalAddress","streetAddress":"Shop No. 3, Sardar Patel Shopping Center, Sardar Market","addressLocality":"Kheda","addressRegion":"Gujarat","postalCode":"387411","addressCountry":"IN"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"347"},"openingHours":"Mo-Sa 09:00-19:00"}
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Skylar India Solar Energy",
+    "telephone": "+918530252952",
+    "email": "darshansolarkheda@gmail.com",
+    "url": "https://skylarindia.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Shop No. 3, Sardar Patel Shopping Center, Sardar Market",
+      "addressLocality": "Kheda",
+      "addressRegion": "Gujarat",
+      "postalCode": "387411",
+      "addressCountry": "IN"
+    },
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "347" },
+    "openingHours": "Mo-Sa 09:00-19:00"
+  }
   </script>
+
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-<!-- ══════════════════════════════════════════════════
+<!-- ════════════════════════════════════════════════════════
+     PRELOADER
+════════════════════════════════════════════════════════ -->
+<div id="preloader" role="status" aria-label="Loading">
+  <div class="pl-sun">
+    <div class="pl-ring pl-ring-1"></div>
+    <div class="pl-ring pl-ring-2"></div>
+    <div class="pl-rays">
+      <div class="pl-ray"></div><div class="pl-ray"></div>
+      <div class="pl-ray"></div><div class="pl-ray"></div>
+      <div class="pl-ray"></div><div class="pl-ray"></div>
+      <div class="pl-ray"></div><div class="pl-ray"></div>
+    </div>
+    <div class="pl-sun-core"></div>
+  </div>
+  <p class="pl-text" data-t="preloader.text">Powering a Greener Gujarat</p>
+  <div class="pl-bar-wrap"><div class="pl-bar"></div></div>
+</div>
+
+
+<!-- ════════════════════════════════════════════════════════
      NAVBAR
-══════════════════════════════════════════════════ -->
-<nav class="navbar" role="navigation" aria-label="Main navigation">
+════════════════════════════════════════════════════════ -->
+<nav id="navbar" role="navigation" aria-label="Main navigation">
   <div class="wrap nav-inner">
 
-    <a href="#" class="logo" aria-label="Skylar India Solar Energy">
-      <div class="logo-mark">
+    <a href="#" class="nav-logo" aria-label="Skylar India Solar Energy">
+      <div class="logo-icon">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <circle cx="12" cy="12" r="5"/>
           <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
@@ -34,27 +74,30 @@
         </svg>
       </div>
       <div>
-        <div class="logo-name">Skylar India</div>
-        <div class="logo-sub">Solar Energy</div>
+        <div class="logo-name" data-t="nav.logo_name">Skylar India</div>
+        <div class="logo-sub"  data-t="nav.logo_sub">Solar Energy</div>
       </div>
     </a>
 
     <nav class="nav-links" aria-label="Primary">
-      <a href="#services" id="nav-services">Services</a>
-      <a href="#contact"  id="nav-contact">Contact</a>
+      <a href="#services" data-t="nav.services">Services</a>
+      <a href="#benefits" data-t="nav.benefits">Benefits</a>
+      <a href="#contact"  data-t="nav.contact">Contact</a>
     </nav>
 
     <div class="nav-right">
       <a href="tel:+918530252952" class="nav-phone">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12a19.79 19.79 0 01-3.07-8.67A2 2 0 013.6 1.27h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.91 8.91a16 16 0 006.72 6.72l.91-.91a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-        +91 85302 52952
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12a19.79 19.79 0 01-3.07-8.67A2 2 0 013.6 1.27h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.91 8.91a16 16 0 006.72 6.72l.91-.91a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+        </svg>
+        <span data-t="nav.phone">+91 85302 52952</span>
       </a>
-      <a href="#contact" class="btn btn-primary" id="nav-cta">Book Free Survey</a>
+      <a href="#contact" class="btn btn-primary" data-t="nav.cta">Free Survey</a>
     </div>
 
     <button id="menu-toggle" aria-label="Open menu" aria-expanded="false">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <line x1="3" y1="6" x2="21" y2="6"/>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <line x1="3" y1="6"  x2="21" y2="6"/>
         <line x1="3" y1="12" x2="21" y2="12"/>
         <line x1="3" y1="18" x2="21" y2="18"/>
       </svg>
@@ -63,92 +106,94 @@
 </nav>
 
 <!-- Mobile Menu -->
-<div class="menu-overlay" id="menu-overlay"></div>
-<div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Mobile navigation">
-  <button class="menu-close" id="menu-close" aria-label="Close menu">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-      <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+<div id="mob-overlay"></div>
+<div id="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+  <button id="mob-close" aria-label="Close menu">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+      <line x1="18" y1="6"  x2="6"  y2="18"/>
+      <line x1="6"  y1="6"  x2="18" y2="18"/>
     </svg>
   </button>
-  <a href="#services" id="mob-services">Services</a>
-  <a href="#contact"  id="mob-contact">Contact</a>
-  <a href="tel:+918530252952">+91 85302 52952</a>
-  <a href="#contact" class="btn btn-primary" id="mob-cta">Book Free Survey</a>
+  <a href="#services" data-t="nav.services">Services</a>
+  <a href="#benefits" data-t="nav.benefits">Benefits</a>
+  <a href="#contact"  data-t="nav.contact">Contact</a>
+  <div class="mob-divider"></div>
+  <a href="tel:+918530252952">
+    <span data-t="nav.phone">+91 85302 52952</span>
+  </a>
+  <a href="#contact" class="btn btn-primary" data-t="nav.cta">Free Survey</a>
 </div>
 
 
-<!-- ══════════════════════════════════════════════════
+<!-- ════════════════════════════════════════════════════════
      1. HERO
-══════════════════════════════════════════════════ -->
-<header class="hero" id="home">
+════════════════════════════════════════════════════════ -->
+<header class="hero wrap" id="home">
 
   <!-- Left: Content -->
   <div class="hero-content">
-    <div class="hero-badge" id="hero-badge">MNRE Certified • Kheda, Gujarat</div>
+    <div class="hero-badge" data-t="hero.badge">🏛️ Govt. Approved • MNRE Certified • Kheda, Gujarat</div>
 
-    <div class="hero-heading">
-      <span class="display line1" id="hero-line1">Solar Power.</span>
-      <span class="display line-amber" id="hero-line2">Zero Bill.</span>
-      <span class="display line-outline" id="hero-line3">₹78,000 Subsidy.</span>
-    </div>
+    <h1 class="hero-headline">
+      <span class="hero-line"     data-t="hero.line1">Go Solar.</span>
+      <span class="hero-line-amber" data-t="hero.line2">Pay Nothing.</span>
+      <span class="hero-line-outline">₹78,000 Subsidy.</span>
+    </h1>
 
-    <p class="hero-sub" id="hero-sub">
-      Gujarat's most trusted solar installer. Home, farm &amp; business — installed in 1–3 days with 25-year warranty.
+    <p class="hero-tagline" data-t="hero.tagline">
+      Gujarat's most trusted solar installer — Homes, Farms &amp; Businesses installed in 1–3 days.
     </p>
 
     <div class="hero-actions">
-      <a href="#contact" class="btn btn-primary" id="hero-btn-survey">Book Free Survey</a>
-      <a href="tel:+918530252952" class="btn btn-ghost" id="hero-btn-call">Call Now</a>
+      <a href="#contact" class="btn btn-primary" data-t="hero.btn_primary">Book Free Survey</a>
+      <a href="tel:+918530252952" class="btn btn-ghost" data-t="hero.btn_call">Call Now</a>
     </div>
 
-    <div class="subsidy-strip" id="hero-subsidy">
-      <!-- filled by JS -->
-    </div>
-
-    <div class="hero-stats" id="hero-stats">
+    <div class="hero-stats" id="hero-stats" aria-label="Key statistics">
       <!-- filled by JS -->
     </div>
   </div>
 
-  <!-- Right: Solar output card -->
+  <!-- Right: Live Solar Output Card -->
   <div class="hero-visual" aria-hidden="true">
     <div class="solar-card">
-      <div class="sc-top">
-        <div class="sc-live">LIVE</div>
-        <div class="sc-top-label">Current Output</div>
+      <div class="sc-header">
+        <div class="sc-live-row">
+          <div class="sc-live-dot"></div>
+          <span class="sc-live-label" data-t="hero.card.live_label">LIVE OUTPUT</span>
+        </div>
         <div class="sc-power"><span>kW</span> 4.8</div>
-        <div class="sc-power-sub">Peak today: 5.2 kW at 12:30 PM</div>
+        <div class="sc-peak" data-t="hero.card.peak">Peak today: 5.2 kW at 12:30 PM</div>
       </div>
-
-      <div class="sc-metrics">
-        <div class="sc-metric">
-          <div class="sc-m-val">₹0</div>
-          <div class="sc-m-lbl">This Month</div>
+      <div class="sc-body">
+        <div class="sc-metrics">
+          <div class="sc-metric">
+            <div class="sc-m-val">₹0</div>
+            <div class="sc-m-lbl">Bill This Month</div>
+          </div>
+          <div class="sc-metric">
+            <div class="sc-m-val">312</div>
+            <div class="sc-m-lbl">kWh Saved</div>
+          </div>
+          <div class="sc-metric">
+            <div class="sc-m-val">218 kg</div>
+            <div class="sc-m-lbl">CO₂ Offset</div>
+          </div>
         </div>
-        <div class="sc-metric">
-          <div class="sc-m-val">312</div>
-          <div class="sc-m-lbl">kWh Saved</div>
+        <div class="sc-bars">
+          <div class="sc-bar-row">
+            <div class="sc-bar-head"><span>Grid Export</span><strong>78%</strong></div>
+            <div class="sc-bar-track"><div class="sc-bar-fill" style="width:78%"></div></div>
+          </div>
+          <div class="sc-bar-row">
+            <div class="sc-bar-head"><span>Self Use</span><strong>22%</strong></div>
+            <div class="sc-bar-track"><div class="sc-bar-fill amber" style="width:22%; animation-delay:.5s"></div></div>
+          </div>
         </div>
-        <div class="sc-metric">
-          <div class="sc-m-val">218kg</div>
-          <div class="sc-m-lbl">CO₂ Offset</div>
+        <div class="sc-subsidy">
+          <div class="sc-sub-label" data-t="hero.card.subsidy_label">PM Surya Ghar Subsidy</div>
+          <div class="sc-sub-amount" data-t="hero.card.subsidy_amount">₹78,000</div>
         </div>
-      </div>
-
-      <div class="sc-bars">
-        <div class="sc-bar-row">
-          <div class="sc-bar-head"><span>Grid Export</span><strong>78%</strong></div>
-          <div class="sc-bar-track"><div class="sc-bar-fill" style="width:78%"></div></div>
-        </div>
-        <div class="sc-bar-row">
-          <div class="sc-bar-head"><span>Self Use</span><strong>22%</strong></div>
-          <div class="sc-bar-track"><div class="sc-bar-fill" style="width:22%;animation-delay:.8s"></div></div>
-        </div>
-      </div>
-
-      <div class="sc-subsidy">
-        <div class="sc-sub-label">PM Surya Ghar Subsidy</div>
-        <div class="sc-sub-amt">₹78,000</div>
       </div>
     </div>
   </div>
@@ -156,86 +201,148 @@
 </header>
 
 
-<!-- ══════════════════════════════════════════════════
+<!-- ════════════════════════════════════════════════════════
      2. TRUST BAR
-══════════════════════════════════════════════════ -->
-<div class="trust-bar">
-  <div class="wrap trust-inner" id="trust-items">
+════════════════════════════════════════════════════════ -->
+<div class="trust-bar" role="complementary" aria-label="Trust indicators">
+  <div class="wrap trust-bar-inner" id="trust-items">
     <!-- filled by JS -->
   </div>
 </div>
 
 
-<!-- ══════════════════════════════════════════════════
-     3. SERVICES
-══════════════════════════════════════════════════ -->
-<section id="services">
+<!-- ════════════════════════════════════════════════════════
+     3. SUBSIDY (Government Benefits)
+════════════════════════════════════════════════════════ -->
+<section class="subsidy-section" id="subsidy" aria-labelledby="subsidy-title">
+  <div class="wrap">
+    <div class="subsidy-head reveal">
+      <span class="section-label" data-t="subsidy.label">PM Surya Ghar Muft Bijli Yojana</span>
+      <h2 id="subsidy-title" data-t="subsidy.title">Get Up To ₹78,000 Government Subsidy</h2>
+      <p data-t="subsidy.subtitle">Direct to your bank account. No middlemen. We handle the entire application for you.</p>
+    </div>
+
+    <div class="subsidy-tiers reveal" id="subsidy-tiers">
+      <!-- filled by JS -->
+    </div>
+
+    <div class="subsidy-extra-wrap reveal">
+      <div class="subsidy-extra" data-t="subsidy.extra">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px;flex-shrink:0"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Gujarat State Additional Subsidy: ₹10,000/kW extra on top of central subsidy
+      </div>
+      <p class="subsidy-note" data-t="subsidy.note">300 free electricity units every month worth ~₹2,400</p>
+    </div>
+
+    <div class="subsidy-cta reveal">
+      <a href="#contact" class="btn btn-amber" data-t="subsidy.cta">Check My Subsidy Amount</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════
+     4. SERVICES
+════════════════════════════════════════════════════════ -->
+<section id="services" aria-labelledby="services-title">
   <div class="wrap">
     <div class="services-head reveal">
-      <span class="label-tag">What We Do</span>
-      <h2>Solar for Every Need</h2>
+      <span class="section-label" data-t="services.label">Our Services</span>
+      <h2 id="services-title" data-t="services.title">Solar for Every Need</h2>
     </div>
-    <div class="services-grid stagger" id="services-grid">
+    <div class="services-grid" id="services-grid">
       <!-- filled by JS -->
     </div>
   </div>
 </section>
 
 
-<!-- ══════════════════════════════════════════════════
-     4. TESTIMONIALS (2 quotes strip)
-══════════════════════════════════════════════════ -->
-<div class="testi-section">
+<!-- ════════════════════════════════════════════════════════
+     5. BENEFITS
+════════════════════════════════════════════════════════ -->
+<section id="benefits" class="alt" aria-labelledby="benefits-title">
   <div class="wrap">
-    <div class="testi-head reveal">
-      <span class="label-tag">Real Customers</span>
-      <h2 style="margin-top:.5rem">Results That Speak</h2>
+    <div class="benefits-head reveal">
+      <span class="section-label" data-t="benefits.label">Why Go Solar</span>
+      <h2 id="benefits-title" data-t="benefits.title">Benefits That Last 25 Years</h2>
     </div>
-    <div class="testi-grid stagger" id="testi-grid">
+    <div class="benefits-grid" id="benefits-grid">
       <!-- filled by JS -->
     </div>
   </div>
-</div>
+</section>
 
 
-<!-- ══════════════════════════════════════════════════
-     5. CONTACT
-══════════════════════════════════════════════════ -->
-<section id="contact" class="alt">
+<!-- ════════════════════════════════════════════════════════
+     6. PROCESS
+════════════════════════════════════════════════════════ -->
+<section class="process-section" id="process" aria-labelledby="process-title">
+  <div class="wrap">
+    <div class="process-head reveal">
+      <span class="section-label" data-t="process.label">How It Works</span>
+      <h2 id="process-title" data-t="process.title">From Survey to Savings in 4 Easy Steps</h2>
+    </div>
+    <div class="process-steps" id="process-steps">
+      <!-- filled by JS -->
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════
+     7. TESTIMONIALS
+════════════════════════════════════════════════════════ -->
+<section id="testimonials" aria-labelledby="testi-title">
+  <div class="wrap">
+    <div class="testi-head reveal">
+      <span class="section-label" data-t="testimonials.label">Customer Stories</span>
+      <h2 id="testi-title" data-t="testimonials.title">Real Results from Real Customers</h2>
+    </div>
+    <div class="testi-grid" id="testi-grid">
+      <!-- filled by JS -->
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════
+     8. CONTACT
+════════════════════════════════════════════════════════ -->
+<section id="contact" class="alt" aria-labelledby="contact-title">
   <div class="wrap">
     <div class="contact-inner">
 
-      <!-- Left: info -->
+      <!-- Left: Info -->
       <div class="contact-left reveal">
-        <span class="label-tag">Get Started</span>
-        <h2 id="contact-title">Book Your Free Survey</h2>
-        <p id="contact-subtitle">Zero obligation. Custom quote + subsidy calculation. We reply within 24 hours.</p>
+        <span class="section-label" data-t="contact.label">Get Started</span>
+        <h2 id="contact-title" data-t="contact.title">Book Your Free Survey</h2>
+        <p data-t="contact.subtitle">No obligation. Get a custom quote + full subsidy calculation. We reply within 2 hours.</p>
 
         <div class="contact-details">
           <div class="cd-item">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12a19.79 19.79 0 01-3.07-8.67A2 2 0 013.6 1.27h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.91 8.91a16 16 0 006.72 6.72l.91-.91a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-            <a href="tel:+918530252952" id="contact-phone">+91 85302 52952</a>
+            <a href="tel:+918530252952" data-t="contact.phone">+91 85302 52952</a>
           </div>
           <div class="cd-item">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            <a href="mailto:darshansolarkheda@gmail.com" id="contact-email">darshansolarkheda@gmail.com</a>
+            <a href="mailto:darshansolarkheda@gmail.com" data-t="contact.email">darshansolarkheda@gmail.com</a>
           </div>
           <div class="cd-item">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <strong id="contact-address">Shop No. 3, Sardar Market, Kheda – 387411</strong>
+            <span data-t="contact.address">Shop No. 3, Sardar Market, Kheda – 387411</span>
           </div>
           <div class="cd-item">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
-            <span id="contact-hours">Mon–Sat  9 AM – 7 PM</span>
+            <span data-t="contact.hours">Mon–Sat, 9 AM – 7 PM</span>
           </div>
         </div>
 
         <div class="wa-block">
-          <p>Prefer WhatsApp? Message us and get a reply in minutes.</p>
+          <p>Prefer WhatsApp? Get a reply in minutes — in Gujarati or English.</p>
           <a href="https://wa.me/918530252952?text=Hello%2C+I+want+a+free+solar+survey."
              target="_blank" rel="noopener" class="btn btn-wa">
-            <svg viewBox="0 0 24 24" fill="currentColor" style="width:17px;height:17px;flex-shrink:0"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.955 0C5.362 0 0 5.373 0 11.979c0 2.099.546 4.12 1.586 5.894L.057 24l6.305-1.652a11.956 11.956 0 005.593 1.391h.005C18.352 23.739 24 18.366 24 11.76 24 5.373 18.548 0 11.955 0zm0 21.766a9.935 9.935 0 01-5.046-1.371l-.361-.214-3.742.981.999-3.648-.236-.374a9.905 9.905 0 01-1.519-5.301c0-5.484 4.46-9.944 9.942-9.944 2.659 0 5.156 1.037 7.033 2.919a9.878 9.878 0 012.91 7.028c-.003 5.487-4.463 9.924-9.98 9.924z"/></svg>
-            WhatsApp Us
+            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.955 0C5.362 0 0 5.373 0 11.979c0 2.099.546 4.12 1.586 5.894L.057 24l6.305-1.652a11.956 11.956 0 005.593 1.391h.005C18.352 23.739 24 18.366 24 11.76 24 5.373 18.548 0 11.955 0zm0 21.766a9.935 9.935 0 01-5.046-1.371l-.361-.214-3.742.981.999-3.648-.236-.374a9.905 9.905 0 01-1.519-5.301c0-5.484 4.46-9.944 9.942-9.944 2.659 0 5.156 1.037 7.033 2.919a9.878 9.878 0 012.91 7.028c-.003 5.487-4.463 9.924-9.98 9.924z"/></svg>
+            <span data-t="contact.whatsapp_cta">Chat on WhatsApp</span>
           </a>
         </div>
       </div>
@@ -246,33 +353,37 @@
           <form id="contact-form" novalidate>
 
             <div class="form-group">
-              <label class="form-label" for="inp-name" id="lbl-name">Your Name</label>
-              <input type="text" id="inp-name" class="form-field" placeholder="Your Name" required autocomplete="name">
+              <label class="form-label" for="inp-name" data-t="contact.form.name_label">Your Name</label>
+              <input type="text" id="inp-name" class="form-field"
+                     data-t-ph="contact.form.name_ph"
+                     placeholder="e.g. Ramesh Patel" required autocomplete="name">
             </div>
 
             <div class="form-group">
-              <label class="form-label" for="inp-phone" id="lbl-phone">Phone Number</label>
-              <input type="tel" id="inp-phone" class="form-field" placeholder="Phone Number" required autocomplete="tel">
+              <label class="form-label" for="inp-phone" data-t="contact.form.phone_label">Mobile Number</label>
+              <input type="tel" id="inp-phone" class="form-field"
+                     data-t-ph="contact.form.phone_ph"
+                     placeholder="10-digit number" required autocomplete="tel">
             </div>
 
             <div class="form-group">
-              <label class="form-label" for="inp-location" id="lbl-location">Your Village / Town</label>
-              <input type="text" id="inp-location" class="form-field" placeholder="Your Village / Town">
+              <label class="form-label" for="inp-location" data-t="contact.form.location_label">Your Village / Town</label>
+              <input type="text" id="inp-location" class="form-field"
+                     data-t-ph="contact.form.location_ph"
+                     placeholder="e.g. Kheda, Nadiad, Anand">
             </div>
 
             <div class="form-group">
-              <label class="form-label" for="inp-type" id="lbl-type">System Type</label>
+              <label class="form-label" for="inp-type" data-t="contact.form.type_label">I Need Solar For</label>
               <select id="inp-type" class="form-field">
-                <option value="0">Residential Solar</option>
-                <option value="1">Agricultural Pump</option>
-                <option value="2">Commercial Solar</option>
+                <!-- filled by JS -->
               </select>
             </div>
 
-            <button type="submit" class="btn btn-primary form-submit" id="form-submit">
-              Book Free Survey
+            <button type="submit" class="btn btn-primary form-submit" data-t="contact.form.submit">
+              Book Free Survey →
             </button>
-            <p class="form-note">Sends directly to WhatsApp • No spam, ever.</p>
+            <p class="form-note" data-t="contact.form.note">Submits directly to WhatsApp • No spam, ever</p>
           </form>
         </div>
       </div>
@@ -282,49 +393,64 @@
 </section>
 
 
-<!-- ══════════════════════════════════════════════════
-     6. FOOTER
-══════════════════════════════════════════════════ -->
+<!-- ════════════════════════════════════════════════════════
+     9. FOOTER
+════════════════════════════════════════════════════════ -->
 <footer class="footer" role="contentinfo">
   <div class="wrap footer-inner">
 
-    <a href="#" class="logo footer-logo" aria-label="Skylar India Solar Energy">
-      <div class="logo-mark">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <circle cx="12" cy="12" r="5"/>
-          <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
-          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
-          <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
-          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
-        </svg>
-      </div>
+    <div class="footer-top">
       <div>
-        <div class="logo-name">Skylar India</div>
-        <div class="logo-sub">Solar Energy</div>
+        <a href="#" class="footer-logo nav-logo" aria-label="Skylar India Solar Energy">
+          <div class="logo-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="5"/>
+              <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+              <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+            </svg>
+          </div>
+          <div>
+            <div class="logo-name" data-t="nav.logo_name">Skylar India</div>
+            <div class="logo-sub"  data-t="nav.logo_sub">Solar Energy</div>
+          </div>
+        </a>
+        <p class="footer-tagline" data-t="footer.tagline"></p>
       </div>
-    </a>
 
-    <div class="footer-links-row">
-      <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
-      <a href="https://pmsuryaghar.gov.in" target="_blank" rel="noopener">PM Surya Ghar</a>
-      <a href="https://mnre.gov.in" target="_blank" rel="noopener">MNRE</a>
+      <div style="display:flex;flex-direction:column;gap:1rem;align-items:flex-end">
+        <nav id="footer-links" aria-label="Footer navigation"><!-- filled by JS --></nav>
+        <div id="footer-certs"><!-- filled by JS --></div>
+      </div>
     </div>
 
-    <p class="footer-copy" id="footer-copyright">© 2025 Skylar India Solar Energy</p>
+    <div class="footer-divider"></div>
+
+    <div class="footer-bottom">
+      <p class="footer-copy" data-t="footer.copyright">© 2025 Skylar India Solar Energy. All rights reserved.</p>
+      <div class="footer-govt">
+        Registered with:
+        <a href="https://mnre.gov.in" target="_blank" rel="noopener">MNRE</a> ·
+        <a href="https://pmsuryaghar.gov.in" target="_blank" rel="noopener">PM Surya Ghar</a> ·
+        <a href="https://suryagujarat.guvnl.in" target="_blank" rel="noopener">SURYA Gujarat</a>
+      </div>
+    </div>
 
   </div>
 </footer>
 
 
-<!-- ══ Floating WhatsApp ══════════════════════════════════ -->
+<!-- ════ Floating WhatsApp ════════════════════════════════ -->
 <a href="https://wa.me/918530252952?text=Hello%2C+I+want+a+free+solar+survey."
    class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
-  <svg viewBox="0 0 24 24" fill="white" width="26" height="26">
+  <svg viewBox="0 0 24 24" fill="white" width="28" height="28">
     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
     <path d="M11.955 0C5.362 0 0 5.373 0 11.979c0 2.099.546 4.12 1.586 5.894L.057 24l6.305-1.652a11.956 11.956 0 005.593 1.391h.005C18.352 23.739 24 18.366 24 11.76 24 5.373 18.548 0 11.955 0zm0 21.766a9.935 9.935 0 01-5.046-1.371l-.361-.214-3.742.981.999-3.648-.236-.374a9.905 9.905 0 01-1.519-5.301c0-5.484 4.46-9.944 9.942-9.944 2.659 0 5.156 1.037 7.033 2.919a9.878 9.878 0 012.91 7.028c-.003 5.487-4.463 9.924-9.98 9.924z"/>
   </svg>
+  <span class="wa-float-tip">WhatsApp Us</span>
 </a>
+
 
 <script src="js/i18n.js"></script>
 <script src="js/main.js"></script>
