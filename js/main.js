@@ -60,6 +60,11 @@ function renderNav() {
     const val = t(path);
     if (val) el.href = val;
   });
+  document.querySelectorAll('[data-t-ph]').forEach(el => {
+    const path = el.getAttribute('data-t-ph');
+    const val = t(path);
+    if (val) el.placeholder = val;
+  });
 
   // Scroll shrink
   const nav = document.getElementById('navbar');
@@ -72,12 +77,47 @@ function renderNav() {
   const mobileMenu = document.getElementById('mobile-menu');
   const overlay = document.getElementById('mob-overlay');
   const close = document.getElementById('mob-close');
-  function openMenu() { mobileMenu.classList.add('open'); overlay.classList.add('open'); document.body.style.overflow = 'hidden'; }
-  function closeMenu() { mobileMenu.classList.remove('open'); overlay.classList.remove('open'); document.body.style.overflow = ''; }
+  function openMenu() {
+    mobileMenu.classList.add('open'); overlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    toggle?.setAttribute('aria-expanded', 'true');
+  }
+  function closeMenu() {
+    mobileMenu.classList.remove('open'); overlay.classList.remove('open');
+    document.body.style.overflow = '';
+    toggle?.setAttribute('aria-expanded', 'false');
+  }
   toggle?.addEventListener('click', openMenu);
   close?.addEventListener('click', closeMenu);
   overlay?.addEventListener('click', closeMenu);
   mobileMenu?.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+
+  // Scroll-spy: highlight active nav link
+  const sections = ['home','services','benefits','contact'].map(id => document.getElementById(id)).filter(Boolean);
+  const navAnchors = document.querySelectorAll('.nav-links a[href^="#"]');
+  const spyObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navAnchors.forEach(a => {
+          a.classList.toggle('active', a.getAttribute('href') === `#${entry.target.id}`);
+        });
+      }
+    });
+  }, { rootMargin: '-40% 0px -55% 0px' });
+  sections.forEach(s => spyObserver.observe(s));
+
+  // Language switcher (desktop navbar + mobile menu)
+  const currentLang = window.i18n.getLang();
+  const langHTML = window.i18n.available.map(l =>
+    `<button class="lang-btn${l.code === currentLang ? ' active' : ''}" data-lang="${l.code}">${l.label}</button>`
+  ).join('');
+
+  document.querySelectorAll('#lang-switcher, #mob-lang-switcher').forEach(el => {
+    el.innerHTML = langHTML;
+    el.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.addEventListener('click', () => window.i18n.setLang(btn.dataset.lang));
+    });
+  });
 }
 
 /* ─── Hero stats ──────────────────────────────────────────── */
@@ -198,7 +238,7 @@ function renderContact() {
     const typeEl = document.getElementById('inp-type');
     const typeTxt = typeEl.options[typeEl.selectedIndex].text;
 
-    if (!name || !phone) {
+    if (!name || !/^\d{10}$/.test(phone.replace(/[\s\-+]/g, ''))) {
       shakeForm();
       return;
     }
@@ -206,8 +246,9 @@ function renderContact() {
     const msg = encodeURIComponent(
       `Hello Skylar India! I'd like a free solar survey.\n\nName: ${name}\nPhone: ${phone}\nLocation: ${location}\nInterest: ${typeTxt}`
     );
-    const waUrl = t('contact.whatsapp_url').replace(/\?text=.*/, '') || 'https://wa.me/918530252952';
-    window.open(`${waUrl}?text=${msg}`, '_blank', 'noopener');
+    const rawWaUrl = t('contact.whatsapp_url') || 'https://wa.me/918530252952';
+    const waBase = rawWaUrl.split('?')[0];
+    window.open(`${waBase}?text=${msg}`, '_blank', 'noopener');
   });
 }
 
